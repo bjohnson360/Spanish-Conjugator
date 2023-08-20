@@ -20,7 +20,7 @@ public class MainClass {
 
     static boolean reflexive;
     static String[] pronouns = {"yo","tú","ud./él/ella","nosotros","vosotros","uds./ellos/ellas"};
-    static String[] rpronouns = {"me","te", "se", "nos","os","se"};
+    static String[] rpronouns = {"me ","te ", "se ", "nos ","os ","se "};
     static String[] toBeReflexive = {"","","","","",""};
         public static void main(String[] args) {
             String verb;
@@ -33,7 +33,7 @@ public class MainClass {
             if(verb.substring(verb.length()-2).equals("se")) {
                 reflexive = true;
                 toBeReflexive = rpronouns;
-                verb.tenses.root(verb);
+                verb = tenses.root(verb);
             } else {
                 reflexive = false;
             }
@@ -42,15 +42,15 @@ public class MainClass {
                 verb=tenses.root(verb) + "ir";
             }
 
-            System.out.println("Present Tense:");
-            Present Present = new Present(ARpresent, IRpresent,ERpresent);
-            Present.conjugate(verb);
-            System.out.println();
+            // System.out.println("Present Tense:");
+            // Present Present = new Present(ARpresent, IRpresent,ERpresent);
+            // Present.conjugate(verb);
+            // System.out.println();
 
-            System.out.println("Preterite Tense:");
-            Past Past = new Past(ARpast, ERIRpast);
-            Past.conjugate(verb);
-            System.out.println("");
+            // System.out.println("Preterite Tense:");
+            // Past Past = new Past(ARpast, ERIRpast);
+            // Past.conjugate(verb);
+            // System.out.println("");
 
             System.out.println("Imperfect Tense:");
             Imperfect Imperfect = new Imperfect(ARimperfect, ERIRimperfect, ERIRimperfect);

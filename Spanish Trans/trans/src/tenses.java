@@ -13,11 +13,13 @@ public class tenses {
     String[] IR;
     String[] ERIR;
 
+    //constructor
     public tenses(String[] endings) {
         this.endings = endings;
         addAccent();
     }
 
+    //another constructor for verb endings
     public tenses(String[] AR, String[] ER, String[] IR) {
         this.AR = AR;
         this.ER = ER;
@@ -30,6 +32,16 @@ public class tenses {
     static String[] eToI = {"pedir", "decir", "seguir", "servir", "competir", "elegir", "cerregir", "vestir", "freír", "gemir", "repetir"};
     static String[] oToUe = {"dormir", "almorzar", "morir", "probar", "mover", "colgar", "mostrar", "contar", "costar", "recordar", "volver", "resolver", "solver", "jugar"};
 
+    //a hashmap of vowels with their accents
+    HashMap<Character, String> accents = new HashMap<Character, String>();
+    public void addAccent() {
+        accents.put('i',"í");
+        accents.put('o',"ó");
+        accents.put('a',"á");
+        accents.put('e',"é");
+        accents.put('u',"ú");
+    }
+    
     //returns the root of the verb
     public static String root(String verb) {
         return verb.substring(0, verb.length()-2);
@@ -47,7 +59,7 @@ public class tenses {
     //print method
     public static void print(String root, String[] end) {
         for(int i = 0; i< 6; i++) {
-            String.out.println(MainClass.toBeReflexive[i] + root + ends[i]);
+            System.out.println(MainClass.toBeReflexive[i] + root + end[i]);
         }
     }
 
@@ -57,7 +69,7 @@ public class tenses {
     }
 
     //return the endings of the verb
-    public String[] AEIendings(String verb) {
+    public String[] verbEnding(String verb) {
         if(end(verb) == 'a') {
             return AR;
         } else if(end(verb) == 'e') {
@@ -152,13 +164,4 @@ public class tenses {
         return root;
     }
 
-    //Fills a Hashmap of letters and their corresponding accents
-    HashMap<Character, String> accents = new HashMap<Character, String>();
-    public void addAccent() {
-        accents.put('a',"á");
-        accents.put('e',"é");
-        accents.put('i',"í");
-        accents.put('o',"ó");
-        accents.put('u',"ú");
-    }
 }
