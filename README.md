@@ -9,8 +9,8 @@ Submitted by: Brian Johnson
  # Features
  The following functionality is completed:
  
- - [] Users can enter a verb and it displays the imperfect tense
- - [] Users can enter reflexive verbs and it displays the imperfect tense with corresponding pronoun
+ - [ ] Users can enter a verb and it displays the imperfect tense
+ - [ ] Users can enter reflexive verbs and it displays the imperfect tense with corresponding pronoun
  
  ![Video Walkthrough](https://i.imgur.com/7FozxKL.gif)
  GIF created with GAP
@@ -18,7 +18,7 @@ Submitted by: Brian Johnson
  # Future Features
  The following functionality will be implemented soon:
  
- - [] Displays the present and preterit tenses
+ - [ ] Displays the present and preterit tenses
  
  Will possible implement more tenses such as the subjunctive tense and more as I continue to learn more tenses through my Spanish minor.
  
