@@ -20,7 +20,7 @@ Submitted by: Brian Johnson
  
  - [ ] Displays the present and preterit tenses
  
- Will possible implement more tenses such as the subjunctive tense and more as I continue to learn more tenses through my Spanish minor.
+ Will possibly implement more tenses such as the subjunctive tense and more as I continue to learn more tenses through my Spanish minor.
  
  ## License
  
