@@ -21,7 +21,7 @@ public class MainClass {
     static boolean reflexive;
     static String[] pronouns = {"yo","tú","ud./él/ella","nosotros","vosotros","uds./ellos/ellas"};
     static String[] rpronouns = {"me ","te ", "se ", "nos ","os ","se "};
-    static String[] toBeReflexive = {"","","","","",""};
+    static String[] isReflexive = {"","","","","",""};
         public static void main(String[] args) {
             String verb;
             Scanner scan = new Scanner(System.in);
@@ -32,14 +32,14 @@ public class MainClass {
             //checks if the verb is reflexive
             if(verb.substring(verb.length()-2).equals("se")) {
                 reflexive = true;
-                toBeReflexive = rpronouns;
-                verb = tenses.root(verb);
+                isReflexive = rpronouns;
+                verb = logic.root(verb);
             } else {
                 reflexive = false;
             }
             original = verb;
-            if(tenses.end(verb) == 'í') {
-                verb=tenses.root(verb) + "ir";
+            if(logic.verbVowel(verb) == 'í') {
+                verb=logic.root(verb) + "ir";
             }
 
             // System.out.println("Present Tense:");
